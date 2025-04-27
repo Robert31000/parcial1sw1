@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import JoinProject from '../../../components/JoinProject';
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -10,13 +11,14 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="w-64 bg-gray-900 shadow h-screen p-6">
+    <aside className="w-64 bg-orange-500 shadow h-full p-6">
       <h2 className="text-xl font-bold text-green-800 mb-6">Menú</h2>
-      <nav className="flex flex-col gap-3">
-        <Link to="/projects" className="text-blue-600 font-semibold hover:underline">Proyectos</Link>
-        <Link to="/dashboard/newproject" className="text-blue-600 font-semibold hover:underline">Nuevo Proyecto</Link>
-        <Link to="/tools/upload" className="text-blue-600 font-semibold hover:underline">Mockup desde Imagen</Link>
-        <button onClick={logout} className="mt-6 text-red-500 font-semibold hover:underline">Cerrar Sesión</button>
+      <nav className="flex flex-col h-full gap-3">
+        <Link to="/projects" className="text-black font-semibold hover:underline">Proyectos</Link>
+        <Link to="/dashboard/newproject" className="text-black font-semibold hover:underline">Nuevo Proyecto</Link>
+        <Link to="/tools/upload" className="text-black font-semibold hover:underline">Mockup desde Imagen</Link>
+        <button onClick={logout} className="mt-6 text-white font-semibold hover:underline">Cerrar Sesión</button>
+        <JoinProject/>
       </nav>
     </aside>
   );

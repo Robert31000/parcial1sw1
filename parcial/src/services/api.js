@@ -1,6 +1,13 @@
 import axios from 'axios';
 import { URL_API } from '../ConfigGlobal';
 
+
+
+export const registerUser = async (data) => {
+  const response = await API.post('/auth/register', data);
+  return response.data;
+};
+
 // Config global de Axios
 const API = axios.create({
   baseURL: `${URL_API}`,

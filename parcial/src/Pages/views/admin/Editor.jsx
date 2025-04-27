@@ -1,16 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import CanvasStage from './CanvasStage';
+
 
 const ProjectEditor = () => {
   const { projectId } = useParams();
 
   return (
-    <div className="min-h-screen bg-white p-6">
-      <h1 className="text-2xl font-bold mb-4">Editor de Proyecto #{projectId}</h1>
-      
-      <div className="border border-gray-300 rounded-lg p-6 bg-gray-50">
-        {/* Aquí vendrá el canvas, drag-and-drop, etc */}
-        <p className="text-gray-600">Aquí irá el editor visual del mockup.</p>
+    <div className="p-6 space-y-6">
+      <h1 className="text-2xl font-bold">Editor de Proyecto #{projectId}</h1>
+
+      <div className="flex gap-6 w-full overflow-hidden">
+        <CanvasStage projectId={projectId} />
       </div>
     </div>
   );

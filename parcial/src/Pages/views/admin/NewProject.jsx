@@ -18,16 +18,16 @@ const NewProject = () => {
 
     try {
       const nuevoProyecto = await createProject({ nombre });
-      navigate(`/projects/${nuevoProyecto.id}/editor`);
-    } catch (err) {
+      navigate(`/dashboard/projects/${nuevoProyecto.id}/editor`);
+        } catch (err) {
       setError('Error al crear el proyecto.');
       console.error(err);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-gray-300 px-4">
+      <form onSubmit={handleSubmit} className="bg-gray-600 p-6 rounded shadow w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Crear nuevo proyecto</h2>
         <input
           type="text"
