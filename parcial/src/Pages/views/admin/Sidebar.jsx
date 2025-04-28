@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import JoinProject from '../../../components/JoinProject';
+import SchemaEditor from '../../../components/SchemaEditor';
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ const Sidebar = () => {
         <Link to="/tools/upload" className="text-black font-semibold hover:underline">Mockup desde Imagen</Link>
         <button onClick={logout} className="mt-6 text-white font-semibold hover:underline">Cerrar Sesión</button>
         <JoinProject/>
+       
       </nav>
     </aside>
   );

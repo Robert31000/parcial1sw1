@@ -1,0 +1,12 @@
+<database>
+  <table name="User">
+    <column name="id"    type="number" />
+    <column name="email" type="string" />
+    <column name="password" type="string" />
+  </table>
+  <table name="Product">
+    <column name="id"    type="number" />
+    <column name="name"  type="string" />
+    <column name="price" type="number" />
+  </table>
+</database>
